@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E62542522938E94D00CBB6F3 /* CellClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62542512938E94D00CBB6F3 /* CellClass.swift */; };
 		E6B273222938E3CD00155363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B273212938E3CD00155363 /* AppDelegate.swift */; };
 		E6B273242938E3CD00155363 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B273232938E3CD00155363 /* SceneDelegate.swift */; };
 		E6B273262938E3CD00155363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B273252938E3CD00155363 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E62542512938E94D00CBB6F3 /* CellClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellClass.swift; sourceTree = "<group>"; };
 		E6B2731E2938E3CD00155363 /* BubblePin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubblePin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B273212938E3CD00155363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6B273232938E3CD00155363 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				E6B273212938E3CD00155363 /* AppDelegate.swift */,
+				E62542512938E94D00CBB6F3 /* CellClass.swift */,
 				E6B273232938E3CD00155363 /* SceneDelegate.swift */,
 				E6B273252938E3CD00155363 /* ViewController.swift */,
 				E6B273272938E3CD00155363 /* Main.storyboard */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E62542522938E94D00CBB6F3 /* CellClass.swift in Sources */,
 				E6B273262938E3CD00155363 /* ViewController.swift in Sources */,
 				E6B2732C2938E3CD00155363 /* BubblePin.xcdatamodeld in Sources */,
 				E6B273222938E3CD00155363 /* AppDelegate.swift in Sources */,
