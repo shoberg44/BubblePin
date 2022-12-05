@@ -8,18 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 35 //number of rows in table view
-    }
-    //stoovier
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell")!
-                cell.textLabel?.text = "Hello World!"
-                return cell
-    }
-    
     @IBOutlet weak var tableViewOutlet: UITableView! //noteCell is the identifier of custom cell
     
+    //var noteList : Item[] = []
     
     
     override func viewDidLoad() {
@@ -27,5 +18,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableViewOutlet.delegate = self
         tableViewOutlet.dataSource = self
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 35 //number of rows in table view
+    }
+    //stoovier
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell")!
+                cell.textLabel?.text = "Hello World!"
+                return cell //returns data for cell
+    }
+    
+    
+    
 }
 
