@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Side Bar-->
+        <scene sceneID="CbI-K3-hk8">
+            <objects>
+                <viewController storyboardIdentifier="SideMenuID" title="Side Bar" id="RCJ-5k-TMD" customClass="SideMenuViewController" customModule="BubblePin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D11-S4-FHt">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AAl-tX-Ezu"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <size key="freeformSize" width="260" height="844"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRg-fo-gGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="-546"/>
+        </scene>
         <!--Your Notes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -85,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGL-Ze-ezc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663" y="-260"/>
+            <point key="canvasLocation" x="1774" y="-144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HGt-Y3-Hu6">

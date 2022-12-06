@@ -11,4 +11,8 @@ class CellClass : UITableViewCell{
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
+    func configure(titleLabel : String, typeLabel : String){
+        self.titleLabel.text = titleLabel
+        self.typeLabel.text = typeLabel
+    }
 }
