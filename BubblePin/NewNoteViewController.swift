@@ -9,25 +9,35 @@ import UIKit
 
 class NewNoteViewController: UIViewController {
 
+    @IBOutlet weak var favSwitch: UISwitch!
     @IBOutlet weak var segmentedControlOutlet: UISegmentedControl!
     @IBOutlet weak var nameInput: UITextField!
-    //var name = ""
+    var type = general
+    var isFav = false
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func addNoteButton(_ sender: UIButton) {
-        switch segmentedControlOutlet {
-        case <#pattern#>:
-            <#code#>
-        default:
-            <#code#>
+        if favSwitch.isOn{
+            isFav = true
         }
-        if (nameInput.text == "" )||(nameInput.text == null){
+        else{
+            isFav = false
+        }
+        switch segmentedControlOutlet.selectedSegmentIndex {
+        case 0:
+            type = general
+        case 1:
+            type = password
+        default:
+            type = general
+        }
+        if (nameInput.text == "" ){
             return
         }
         else{
-            AppData.noteList.append(Item(name: nameInput.text, type: segmentedControlOutlet.selectedSegmentIndex., favorite: <#T##Bool#>, id: <#T##Int#>))
+            AppData.noteList.append(Item(name: nameInput.text, type: type, favorite: isFav, id: 0))
         }
         
     }

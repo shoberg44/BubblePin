@@ -46,12 +46,24 @@
                                     <action selector="addNoteButton:" destination="FnY-ou-t8Q" eventType="touchUpInside" id="G8a-xN-ucZ"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WxP-bz-dal">
+                                <rect key="frame" x="92" y="277" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fav" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZ8-YD-3LM">
+                                <rect key="frame" x="94" y="316" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sce-uJ-w8M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Note" id="TpO-f2-qlw"/>
                     <connections>
+                        <outlet property="favSwitch" destination="WxP-bz-dal" id="XPF-Bq-AlC"/>
                         <outlet property="nameInput" destination="5IO-FG-NfB" id="pbo-5j-M7y"/>
                         <outlet property="segmentedControlOutlet" destination="xop-fw-zQN" id="L16-ay-OAe"/>
                     </connections>
