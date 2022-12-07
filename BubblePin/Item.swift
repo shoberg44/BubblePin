@@ -8,12 +8,14 @@
 import Foundation
 class Item{
     var name : String
-    var type : String
+    enum type {
+        case general
+        case password
+    }
     var favorite : Bool
     var id : Int
-    init(name: String, type: String, favorite: Bool, id: Int) {
+    init(name: String, favorite: Bool, id: Int) {
         self.name = name
-        self.type = type
         self.favorite = favorite
         self.id = id
     }
