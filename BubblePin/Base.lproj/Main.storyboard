@@ -8,21 +8,57 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Side Bar-->
-        <scene sceneID="CbI-K3-hk8">
+        <!--New Note-->
+        <scene sceneID="dbK-zm-lYW">
             <objects>
-                <viewController storyboardIdentifier="SideMenuID" title="Side Bar" id="RCJ-5k-TMD" customClass="SideMenuViewController" customModule="BubblePin" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="D11-S4-FHt">
-                        <rect key="frame" x="0.0" y="0.0" width="260" height="844"/>
+                <viewController id="FnY-ou-t8Q" customClass="NewNoteViewController" customModule="BubblePin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wzE-Lm-G43">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="AAl-tX-Ezu"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xop-fw-zQN">
+                                <rect key="frame" x="16" y="210" width="157" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="General"/>
+                                    <segment title="Password"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5IO-FG-NfB">
+                                <rect key="frame" x="16" y="159" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add A Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6L-H5-rNd">
+                                <rect key="frame" x="16" y="137" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gve-Rb-oMS">
+                                <rect key="frame" x="168" y="277" width="55" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                <connections>
+                                    <action selector="addNoteButton:" destination="FnY-ou-t8Q" eventType="touchUpInside" id="G8a-xN-ucZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Sce-uJ-w8M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <size key="freeformSize" width="260" height="844"/>
+                    <navigationItem key="navigationItem" title="New Note" id="TpO-f2-qlw"/>
+                    <connections>
+                        <outlet property="nameInput" destination="5IO-FG-NfB" id="pbo-5j-M7y"/>
+                        <outlet property="segmentedControlOutlet" destination="xop-fw-zQN" id="L16-ay-OAe"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yRg-fo-gGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5q-IH-bbX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1002" y="-546"/>
+            <point key="canvasLocation" x="990.76923076923072" y="-786.25592417061603"/>
         </scene>
         <!--Your Notes-->
         <scene sceneID="tne-QT-ifu">
@@ -77,7 +113,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your Notes" id="Sbu-pS-hZv">
-                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="Foa-s3-uZS"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="Foa-s3-uZS">
+                            <connections>
+                                <segue destination="FnY-ou-t8Q" kind="show" id="SaQ-nq-hFN"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="dD5-PK-g87"/>
                     </navigationItem>
                     <connections>
