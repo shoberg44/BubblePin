@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tableViewOutlet.delegate = self
         tableViewOutlet.dataSource = self
-        AppData.noteList.append(Item(name: "Test Name", type: "N/A", favorite: false, id: 1))
+        AppData.noteList.append(Item(name: "Test Name", type: "N/A", favorite: false, id: 2))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
